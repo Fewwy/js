@@ -1,10 +1,9 @@
-//always working
 $(function animate() {
     console.log("in function");
-	$("#box").click(function(){
+	$(".box").click(function(){
 		respawn();
 		}); 
-    $("#box").animate({
+    $(".box").animate({
 		marginLeft: "90%"
         }, {
             duration: 10000,
@@ -17,7 +16,7 @@ $(function animate() {
 
 function gameover(){
 	console.log("function complete");
-    document.getElementById("box").className="invisible";
+    document.getElementsByClassName('box').style.display = none;
     console.log("GAME OVER!");
 };
 
@@ -29,12 +28,14 @@ function getDuration(){
 
 function respawn(){
 	console.log("stop animation");
-     $("#box").stop();
+     $(".box").stop();
 	var duration = getDuration();
 	
 	console.log("restart animate");
-	document.getElementById("box").style.marginLeft = "0px"
-	 $("#box").animate({
+    var startposition = document.getElementsByid("monstr");
+    for(var i = 0; i < startposition.length; i++)
+        startposition.style.marginLeft = "0px";
+	 $(".box").animate({
             marginLeft: "90%"
         }, {
             duration: duration,
@@ -47,10 +48,5 @@ function respawn(){
 }
 
 
-//hide box when clicked
-//function hide(){
-//$("#box").stop();
-	//document.getElementById("box").break();
-	//document.getElementById("box").className="invisible";
-//;}
 
+ 
