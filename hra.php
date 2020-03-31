@@ -45,7 +45,7 @@
 ?>
         </div>
 
-        <div onclick="generateRandomLocation(this)"> 
+        <div id="startbutton"> 
          <p align="center">Start the Game</p>
          <form align="center">
          <input type="button" value="OK"  >
@@ -56,10 +56,16 @@
 <!-- MONSTERS -->
 
 
-<div id="box" onclick="killFunction(this)">  
+<div class="box" id="monstr1" onclick="killFunction(this, 'none')">
 </div>
-
-
+<div class="box" id="monstr2" onclick="killFunction(this, 'none')">
+</div>
+<div class="box" id="monstr3" onclick="killFunction(this, 'none')">
+</div>
+<div class="box" id="monstr4" onclick="killFunction(this, 'none')">
+</div>
+<div class="box" id="monstr5" onclick="killFunction(this, 'none')">
+</div>
 <!-- Entrances starting points -->  
 <div align="center" id="obdelnik">
 <div id="entrance"> 
@@ -79,26 +85,47 @@
 </div>
 </div>
 <!-- SCRIPT FOR GENERATING STARTING LOCATION OF MONSTER -->
-<script>function generateRandomLocation(){
+<script>
+  document.getElementById("startbutton").addEventListener("click", function generateRandomLocation(){
   var entranceadress = [140,250,360,465,575];
   var Y = 0;
   var X = 5;
   Y = entranceadress[Math.floor(Math.random() * entranceadress.length)];
-  var movemonstr = document.getElementById("box");
-  movemonstr.style.position = "absolute"; 
+  var movemonstr = document.getElementsByClassName('box');
   movemonstr.style.top = Y + 'px';
   movemonstr.style.left = X + 'px';
-}
-
+});
 </script>
 <script>
-  function killFunction(){
-  var monstr = document.getElementById("box");
-  monstr.addEventListener("click", killmonstr);
-  function killmonstr() {
-  document.getElementById("box").display: none;}
-
+  function  killFunction(monstr1,visibility) {
+    monstr1.style.display = visibility;
+  }
 </script>
+<script>
+  function  killFunction(monstr2,visibility) {
+    monstr2.style.display = visibility;
+  }
+</script>
+<script>
+  function  killFunction(monstr3,visibility) {
+    monstr3.style.display = visibility;
+  }
+</script>
+<script>
+  function  killFunction(monstr4,visibility) {
+    monstr4.style.display = visibility;
+  }
+</script>
+<script>
+  function  killFunction(monstr5,visibility) {
+    monstr5.style.display = visibility;
+  }
+</script>
+
+<!--<script>
+  document.getElementsByClassName('box').addEventListener("click", function killFunction() {
+  document.getElementById("monstr1").style.display = none;});
+</script>  -->
 <!--  script for warning of the images upload NOT READY YET-->
 <script>
 function monsterupload() {
