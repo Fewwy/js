@@ -1,41 +1,39 @@
 $(function animate() {
     console.log("in function");
-	$(".box").click(function(){
-		respawn();
-		}); 
+    $(".box").click(function(){
+        respawn();
+        }); 
     $(".box").animate({
-		marginLeft: "90%"
+        marginLeft: "90%"
         }, {
             duration: 10000,
             easing: "linear",
             complete: function () {
-				gameover();
+                gameover();
             }
         });
 });
 
 function gameover(){
 	console.log("function complete");
-    document.getElementsByClassName('box').style.display = none;
+      var idecko = $("monstr").attr("id");
+     $("#monstr" + idecko).style = "display:none";
     console.log("GAME OVER!");
 };
-
 function getDuration(){
-	var speed = Math.round(10000*Math.random());
-	console.log("duration: " + speed);
-	return speed;
+    var speed = Math.round(10000*Math.random());
+    console.log("duration: " + speed);
+    return speed;
 }
 
 function respawn(){
 	console.log("stop animation");
-     $(".box").stop();
+    var idecko = $("monstr").attr("id");
+     $("#monstr" + idecko).stop();
 	var duration = getDuration();
-	
 	console.log("restart animate");
-    var startposition = document.getElementsByid("monstr");
-    for(var i = 0; i < startposition.length; i++)
-        startposition.style.marginLeft = "0px";
-	 $(".box").animate({
+    $("#monstr" + idecko).css('margin-left 0px');
+	 $("#monstr" + idecko).animate({
             marginLeft: "90%"
         }, {
             duration: duration,
