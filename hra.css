@@ -17,7 +17,7 @@ justify-content:space-evenly;
 	position:relative;
 }
 
-#box{
+.box{
 border: 2px solid red;
 border-style: double;
 border-radius: 5px;
@@ -28,18 +28,34 @@ background:#98bf21;
 margin:6px;
 }
 
+#monstr1{
+position: relative;
+top: 265px;
+}
+#monstr2{
+position: relative;
+top: 335px;
+}
+#monstr3{
+position: relative;
+top: 400px;
+}
+#monstr4{
+position: relative;
+top: 470px;
+}
+#monstr5{
+position: relative;
+top: 540px;
+}
+
 #edge{
     width:100%;
     height:600px;
     border:1px solid #3377af;
     padding:5px;
 }
-.box{
 
-    width:40px;
-    height:40px;
-    border:1px solid #a82244;
-}
 .dot {
     height: 25px;
     width: 25px;
