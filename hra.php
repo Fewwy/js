@@ -54,7 +54,7 @@
         <div id="startbutton"> 
          <p align="center">Start the Game</p>
          <form align="center">
-         <input type="button" id="btnStart" onclick=newGame() value="New game" />
+         <input type="button" id="btnStart" onclick="newGame()" value="New game" />
          <input type="button" id="btnPause" onclick="pauseResumeGame()" value="||" />
          </form>
         </div>
@@ -95,30 +95,6 @@
 </div>
 </div>
 <!-- SCRIPT FOR GENERATING STARTING LOCATION OF MONSTER -->
-
-
-
-
-<!-- 
-
-<script>
-  document.getElementById("startbutton").addEventListener("click", function generateRandomLocation(){
-  var entranceadress = [140,250,360,465,575];
-  var Y = 0;
-  var X = 5;
-  Y = entranceadress[Math.floor(Math.random() * entranceadress.length)];
-  var movemonstr = document.getElementsByClassName('box');
-  movemonstr.style.top = Y + 'px';
-  movemonstr.style.left = X + 'px';
-});
-</script>
-
-<script>
-function monsterupload() {
-  alert("You need to upload images of monsters");
-}
-</script>
- -->
 
 
 </body>
