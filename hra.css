@@ -34,13 +34,13 @@ width:30px;
 background:#98bf21;
 margin:6px;
 z-index: 1;
-max-width: 30px;
-max-height: 30px;
+max-width: 40px;
+max-height: 40px;
 }
 
 #monstrimage{
-max-width: 30px;
-max-height: 30px;
+max-width: 40px;
+max-height: 40px;
 border: 2px solid red;
 border-style: double;
 border-radius: 5px;
