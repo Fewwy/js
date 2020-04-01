@@ -17,6 +17,16 @@ justify-content:space-evenly;
 	position:relative;
 }
 
+#pointstable{
+position:relative;
+width:25px;
+height:25px;
+margin-top: 15px;
+border:5px solid #98bf21;
+padding:5px;
+font-size: 15;
+}
+
 .box{
 border: 2px solid red;
 border-style: double;
@@ -29,24 +39,24 @@ margin:6px;
 }
 
 #monstr1{
-position: relative;
-top: 265px;
+position: absolute;
+top: 140px;
 }
 #monstr2{
-position: relative;
-top: 335px;
+position: absolute;
+top: 250px;
 }
 #monstr3{
-position: relative;
-top: 400px;
+position: absolute;
+top: 360px;
 }
 #monstr4{
-position: relative;
-top: 470px;
+position: absolute;
+top: 465px;
 }
 #monstr5{
-position: relative;
-top: 540px;
+position: absolute;
+top: 575px;
 }
 
 #edge{
@@ -68,14 +78,3 @@ top: 540px;
     display: none;
 	
 }
-
-
-/*
-Some kinda style for the main div(pole)	*/
-
-/*	some kinda style for the pixels-monsters
-should be round
-*/	
-
-/* some kind style for the gates
-*/
