@@ -8,7 +8,6 @@
   <meta name="robots" content="noindex,follow">
   <meta name="googlebot" content="nosnippet,noarchive">
   <link rel="stylesheet" type="text/css" href="../hra.css">
-  
   <script src="jquery.min.js"></script>
   <title>Hra</title>
 
@@ -18,7 +17,14 @@
 
 <body>
   <script src="move.js"></script>
+
 <!-- menu for the upload skore, images and game start -->
+<script>if (window.File && window.FileReader && window.FileList && window.Blob) {
+  alert(„FILE API je podporován.“);
+} else {
+  alert(„FILE API není v tomto prohlížeči plně podporován.“);
+}</script>
+
 <div id="menu"> 
       <div>
         <p align="center">  Skore Upload</p>
@@ -48,8 +54,12 @@
         <div id="startbutton"> 
          <p align="center">Start the Game</p>
          <form align="center">
-         <input type="button" value="OK"  >
+         <input type="button" id="btnStart" onclick=newGame() value="New game" />
+         <input type="button" id="btnPause" onclick="pauseResumeGame()" value="||" />
          </form>
+        </div>
+        <div id=pointstable align="center">
+          <output id="currentScore"> </output>
         </div>
 </div>
 
@@ -68,23 +78,29 @@
 </div>
 <!-- Entrances starting points -->  
 <div align="center" id="obdelnik">
-<div id="entrance"> 
+<div id="entrance1"> 
 <img src="http://210169.czweb.org/img/entrance.jpg" id="pictureentrance" width="45" height="50" align="left">
 </div>
-<div id="entrance"> 
+<div id="entrance2"> 
 <img src="http://210169.czweb.org/img/entrance.jpg" id="pictureentrance" width="45" height="50" align="left">
 </div>
-<div id="entrance"> 
+<div id="entrance3"> 
 <img src="http://210169.czweb.org/img/entrance.jpg" id="pictureentrance" width="45" height="50" align="left">
 </div>
-<div id="entrance"> 
+<div id="entrance4"> 
 <img src="http://210169.czweb.org/img/entrance.jpg" id="pictureentrance" width="45" height="50" align="left">
 </div>
-<div id="entrance"> 
+<div id="entrance5"> 
 <img src="http://210169.czweb.org/img/entrance.jpg" id="pictureentrance" width="45" height="50" align="left">
 </div>
 </div>
 <!-- SCRIPT FOR GENERATING STARTING LOCATION OF MONSTER -->
+
+
+
+
+<!-- 
+
 <script>
   document.getElementById("startbutton").addEventListener("click", function generateRandomLocation(){
   var entranceadress = [140,250,360,465,575];
@@ -96,43 +112,13 @@
   movemonstr.style.left = X + 'px';
 });
 </script>
-<script>
-  function  killFunction(monstr1,visibility) {
-    monstr1.style.display = visibility;
-  }
-</script>
-<script>
-  function  killFunction(monstr2,visibility) {
-    monstr2.style.display = visibility;
-  }
-</script>
-<script>
-  function  killFunction(monstr3,visibility) {
-    monstr3.style.display = visibility;
-  }
-</script>
-<script>
-  function  killFunction(monstr4,visibility) {
-    monstr4.style.display = visibility;
-  }
-</script>
-<script>
-  function  killFunction(monstr5,visibility) {
-    monstr5.style.display = visibility;
-  }
-</script>
 
-<!--<script>
-  document.getElementsByClassName('box').addEventListener("click", function killFunction() {
-  document.getElementById("monstr1").style.display = none;});
-</script>  -->
-<!--  script for warning of the images upload NOT READY YET-->
 <script>
 function monsterupload() {
   alert("You need to upload images of monsters");
 }
 </script>
-
+ -->
 
 
 </body>
