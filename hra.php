@@ -19,36 +19,22 @@
   <script src="move.js"></script>
 
 <!-- menu for the upload skore, images and game start -->
-<script>if (window.File && window.FileReader && window.FileList && window.Blob) {
-  alert(„FILE API je podporován.“);
-} else {
-  alert(„FILE API není v tomto prohlížeči plně podporován.“);
-}</script>
+
 
 <div id="menu"> 
-      <div>
+      <div align="center">
         <p align="center">  Skore Upload</p>
-        <form action="/action_page.php">
-        <input type="file" id="myFile" name="SkoreUpload">
+        <form>
+        <input type="file" id="myFile" name="SkoreUpload" onclick="saveTxt()">
         <input type="submit" value="Upload">
         </form>
       </div>
-        <div>
+        <div align="center">
           <p align="center">  Upload Monster Pictures</p>
-         <?php
-    if (isset($_FILES['upload'])) {
-        //todo: handle the uploaded file
-        echo "Your file was uploaded successfully";
-    } else {
-    ?>
-        <form action="fileupload.php" method="post" enctype="multipart/form-data">
+        <form>
             <label for="upload">File:</label>
-            <input type="file" name="upload" id="upload">
-            <input type="submit" name="submit" value="Upload">
+            <input type="file" id="files" name="files[]" onchange="readURL(this)"  multiple>
         </form>
-    <?php
-    }
-?>
         </div>
 
         <div id="startbutton"> 
@@ -67,14 +53,19 @@
 
 
 <div class="box" id="monstr1" onclick="killFunction(this, 'none')">
+  <img src="" id="monstrimage">
 </div>
 <div class="box" id="monstr2" onclick="killFunction(this, 'none')">
+<img src="" id="monstrimage">
 </div>
 <div class="box" id="monstr3" onclick="killFunction(this, 'none')">
+<img src="" id="monstrimage">
 </div>
 <div class="box" id="monstr4" onclick="killFunction(this, 'none')">
+<img src="" id="monstrimage">
 </div>
 <div class="box" id="monstr5" onclick="killFunction(this, 'none')">
+<img src="" id="monstrimage">
 </div>
 <!-- Entrances starting points -->  
 <div align="center" id="obdelnik">
@@ -94,7 +85,7 @@
 <img src="http://210169.czweb.org/img/entrance.jpg" id="pictureentrance" width="45" height="50" align="left">
 </div>
 </div>
-<!-- SCRIPT FOR GENERATING STARTING LOCATION OF MONSTER -->
+
 
 
 </body>
