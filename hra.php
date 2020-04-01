@@ -33,10 +33,9 @@
           <p align="center">  Upload Monster Pictures</p>
         <form>
             <label for="upload">File:</label>
-            <input type="file" id="files" name="files[]" onchange="readURL(this)"  multiple>
-        </form>
+            <input type="file" id="files" name="files[]" value="Upload Monsters" onchange="readURL(this)" multiple >
+        </form> 
         </div>
-
         <div id="startbutton"> 
          <p align="center">Start the Game</p>
          <form align="center">
@@ -46,9 +45,8 @@
         </div>
         <div id=pointstable align="center">
           <output id="currentScore"> </output>
-        </div>
 </div>
-
+</div>
 <!-- MONSTERS -->
 
 
