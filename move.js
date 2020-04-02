@@ -22,7 +22,6 @@ function animateMonster(monster){
 
 const getDuration = function(){
     return Math.round(40000*Math.random()/(currentScore+1));
-    console.log("duration: " + speed);
 }
 
 
